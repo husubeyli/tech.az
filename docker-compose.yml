@@ -1,19 +1,36 @@
 version: '3.1'
 
 services: 
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        restart: "always"
+        ports:
+            - "80:80"
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - ./nginx/vhost/:/etc/nginx/vhost.d:ro
+            - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
+            - ./static/:/code/static/
+            # - ./media/:/code/media/
     postgres:
         image: postgres
+        restart: always
         volumes:
-            - ./pgdb/:/var/lib/postgresql/data
+            - ./pgdb/:/var/lib/postgresql/
         ports:
             - "5432:5432"
-        environment:
-            POSTGRES_DB: 'tech_db_name'
-            POSTGRES_USER: 'tech_db_user'
-            POSTGRES_PASSWORD: 'f26b8ab553cfd4767216dbc7be7702fcad1b0115a6347e87e'
+        env_file: ./.env
 
-    adminer:
-        image: adminer
-        restart: always
+
+    web:
+        build: .
+        restart: "always"
         ports:
-            - 8081:8080
+            - "8000:8000"
+        
+        volumes:
+            - .:/code/
+            - ./static/:/code/static/
+        depends_on:
+            - "postgres"
+        env_file: .env
