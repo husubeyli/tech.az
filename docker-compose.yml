@@ -11,7 +11,7 @@ services:
             - ./nginx/vhost/:/etc/nginx/vhost.d:ro
             - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
             - ./static/:/code/static/
-            # - ./media/:/code/media/
+            - ./media/:/code/media/
     postgres:
         image: postgres
         restart: always
@@ -31,6 +31,7 @@ services:
         volumes:
             - .:/code/
             - ./static/:/code/static/
+            - ./media/:/code/media/
         depends_on:
             - "postgres"
         env_file: .env
