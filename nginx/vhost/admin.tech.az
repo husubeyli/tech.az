@@ -5,3 +5,7 @@ location /static/ {
 location /media/ {
     root /code/;
 }
+
+location = /favicon.ico {
+  log_not_found off;
+}
