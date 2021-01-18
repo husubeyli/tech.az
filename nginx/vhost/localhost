@@ -6,8 +6,3 @@ location /media/ {
     root /code/;
 }
 
-location = /favicon.ico {
-  return 204;
-  access_log     off;
-  log_not_found  off;
-}
