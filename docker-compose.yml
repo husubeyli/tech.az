@@ -10,8 +10,8 @@ services:
             - /var/run/docker.sock:/tmp/docker.sock:ro
             - ./nginx/vhost/:/etc/nginx/vhost.d:ro
             - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
-            - ./static/:/tech/static/
-            - ./media/:/tech/media/
+            - ./static/:/tech/static
+            - ./media/:/tech/media
     postgres:
         image: postgres
         restart: always
@@ -31,8 +31,8 @@ services:
         
         volumes:
             - .:/code/
-            - ./static/:/code/static/
-            - ./media/:/code/media/
+            # - ./static/:/code/static
+            # - ./media/:/code/media
         depends_on:
             - "postgres"
         env_file: .env
