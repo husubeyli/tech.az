@@ -7,5 +7,7 @@ location /media/ {
 }
 
 location = /favicon.ico {
-  log_not_found off;
+  return 204;
+  access_log     off;
+  log_not_found  off;
 }
