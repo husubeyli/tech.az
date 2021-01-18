@@ -35,3 +35,8 @@ services:
         depends_on:
             - "postgres"
         env_file: .env
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
