@@ -23,6 +23,7 @@ services:
 
 
     web:
+        container_name: tech
         build: .
         restart: "always"
         ports:
