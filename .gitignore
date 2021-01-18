@@ -1,3 +1,13 @@
+*pgdb*
+.idea/
+media/
 .venv
-pgdb/
 db.sqlite3
+*.pyc
+__pycache__/
+localhost/
+#_frontend/
+data/
+.vscode/
+.DS_Store
+.debris
