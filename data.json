@@ -1,1 +1,131 @@
-[{"model": "dashboard.userdashboardmodule", "pk": 1, "fields": {"title": "Quick links", "module": "jet.dashboard.modules.LinkList", "app_label": null, "user": 1, "column": 0, "order": 0, "settings": "{\"draggable\": false, \"deletable\": false, \"collapsible\": false, \"layout\": \"inline\"}", "children": "[{\"title\": \"Return to site\", \"url\": \"/\"}, {\"title\": \"Change password\", \"url\": \"/admin/password_change/\"}, {\"title\": \"Log out\", \"url\": \"/admin/logout/\"}]", "collapsed": false}}, {"model": "dashboard.userdashboardmodule", "pk": 2, "fields": {"title": "Applications", "module": "jet.dashboard.modules.AppList", "app_label": null, "user": 1, "column": 1, "order": 0, "settings": "{\"models\": null, \"exclude\": [\"auth.*\"]}", "children": "", "collapsed": false}}, {"model": "dashboard.userdashboardmodule", "pk": 3, "fields": {"title": "Administration", "module": "jet.dashboard.modules.AppList", "app_label": null, "user": 1, "column": 2, "order": 0, "settings": "{\"models\": [\"auth.*\"], \"exclude\": null}", "children": "", "collapsed": false}}, {"model": "dashboard.userdashboardmodule", "pk": 4, "fields": {"title": "Recent Actions", "module": "jet.dashboard.modules.RecentActions", "app_label": null, "user": 1, "column": 0, "order": 1, "settings": "{\"limit\": 10, \"include_list\": null, \"exclude_list\": null, \"user\": null}", "children": "", "collapsed": false}}, {"model": "dashboard.userdashboardmodule", "pk": 5, "fields": {"title": "Latest Django News", "module": "jet.dashboard.modules.Feed", "app_label": null, "user": 1, "column": 1, "order": 1, "settings": "{\"feed_url\": \"http://www.djangoproject.com/rss/weblog/\", \"limit\": 5}", "children": "", "collapsed": false}}, {"model": "dashboard.userdashboardmodule", "pk": 6, "fields": {"title": "Support", "module": "jet.dashboard.modules.LinkList", "app_label": null, "user": 1, "column": 2, "order": 1, "settings": "{\"draggable\": true, \"deletable\": true, \"collapsible\": true, \"layout\": \"stacked\"}", "children": "[{\"title\": \"Django documentation\", \"url\": \"http://docs.djangoproject.com/\", \"external\": true}, {\"title\": \"Django \\\"django-users\\\" mailing list\", \"url\": \"http://groups.google.com/group/django-users\", \"external\": true}, {\"title\": \"Django irc channel\", \"url\": \"irc://irc.freenode.net/django\", \"external\": true}]", "collapsed": false}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$216000$QLHEPwqCJPBh$I6sDhqkKRjM6bSNoQ+YnNOb8L/JHkj++Iz92w0zKBuE=", "last_login": "2021-01-17T08:15:07.746Z", "is_superuser": true, "username": "Tariyel", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2021-01-17T08:14:32.164Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "reu7pbrnqxsje2x56u83oacf00i7vxeo", "fields": {"session_data": ".eJxVjM0OwiAQhN-FsyHF5Wfr0bvPQBZYpGpoUtqT8d2lSQ96msx8M_MWnra1-K3x4qckLkKJ028WKD657iA9qN5nGee6LlOQe0UetMnbnPh1Pbp_B4Va6WvGqDg7O0AMYBSAMRpG4piDxXPWAA4RumbslrKxZEY9OMiJUYESny_XnDdY:1l13DH:7mLORXbzZnS-ml4hmru2iCktLDSiKW7hpb3iJCViHK8", "expire_date": "2021-01-31T08:15:07.813Z"}}, {"model": "main.account", "pk": 1, "fields": {"first_name": "Serxan", "last_name": "Rehimli", "email": "serxan@mail.com", "is_published": true, "created_at": "2021-01-17T08:17:09.998Z", "updated_at": "2021-01-17T08:17:09.998Z"}}]
+[
+    {
+        "model": "dashboard.userdashboardmodule",
+        "pk": 1,
+        "fields": {
+            "title": "Quick links",
+            "module": "jet.dashboard.modules.LinkList",
+            "app_label": null,
+            "user": 1,
+            "column": 0,
+            "order": 0,
+            "settings": "{\"draggable\": false, \"deletable\": false, \"collapsible\": false, \"layout\": \"inline\"}",
+            "children": "[{\"title\": \"Return to site\", \"url\": \"/\"}, {\"title\": \"Change password\", \"url\": \"/admin/password_change/\"}, {\"title\": \"Log out\", \"url\": \"/admin/logout/\"}]",
+            "collapsed": false
+        }
+    },
+    {
+        "model": "dashboard.userdashboardmodule",
+        "pk": 2,
+        "fields": {
+            "title": "Applications",
+            "module": "jet.dashboard.modules.AppList",
+            "app_label": null,
+            "user": 1,
+            "column": 1,
+            "order": 0,
+            "settings": "{\"models\": null, \"exclude\": [\"auth.*\"]}",
+            "children": "",
+            "collapsed": false
+        }
+    },
+    {
+        "model": "dashboard.userdashboardmodule",
+        "pk": 3,
+        "fields": {
+            "title": "Administration",
+            "module": "jet.dashboard.modules.AppList",
+            "app_label": null,
+            "user": 1,
+            "column": 2,
+            "order": 0,
+            "settings": "{\"models\": [\"auth.*\"], \"exclude\": null}",
+            "children": "",
+            "collapsed": false
+        }
+    },
+    {
+        "model": "dashboard.userdashboardmodule",
+        "pk": 4,
+        "fields": {
+            "title": "Recent Actions",
+            "module": "jet.dashboard.modules.RecentActions",
+            "app_label": null,
+            "user": 1,
+            "column": 0,
+            "order": 1,
+            "settings": "{\"limit\": 10, \"include_list\": null, \"exclude_list\": null, \"user\": null}",
+            "children": "",
+            "collapsed": false
+        }
+    },
+    {
+        "model": "dashboard.userdashboardmodule",
+        "pk": 5,
+        "fields": {
+            "title": "Latest Django News",
+            "module": "jet.dashboard.modules.Feed",
+            "app_label": null,
+            "user": 1,
+            "column": 1,
+            "order": 1,
+            "settings": "{\"feed_url\": \"http://www.djangoproject.com/rss/weblog/\", \"limit\": 5}",
+            "children": "",
+            "collapsed": false
+        }
+    },
+    {
+        "model": "dashboard.userdashboardmodule",
+        "pk": 6,
+        "fields": {
+            "title": "Support",
+            "module": "jet.dashboard.modules.LinkList",
+            "app_label": null,
+            "user": 1,
+            "column": 2,
+            "order": 1,
+            "settings": "{\"draggable\": true, \"deletable\": true, \"collapsible\": true, \"layout\": \"stacked\"}",
+            "children": "[{\"title\": \"Django documentation\", \"url\": \"http://docs.djangoproject.com/\", \"external\": true}, {\"title\": \"Django \\\"django-users\\\" mailing list\", \"url\": \"http://groups.google.com/group/django-users\", \"external\": true}, {\"title\": \"Django irc channel\", \"url\": \"irc://irc.freenode.net/django\", \"external\": true}]",
+            "collapsed": false
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$216000$QLHEPwqCJPBh$I6sDhqkKRjM6bSNoQ+YnNOb8L/JHkj++Iz92w0zKBuE=",
+            "last_login": "2021-01-17T08:15:07.746Z",
+            "is_superuser": true,
+            "username": "Tariyel",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2021-01-17T08:14:32.164Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "reu7pbrnqxsje2x56u83oacf00i7vxeo",
+        "fields": {
+            "session_data": ".eJxVjM0OwiAQhN-FsyHF5Wfr0bvPQBZYpGpoUtqT8d2lSQ96msx8M_MWnra1-K3x4qckLkKJ028WKD657iA9qN5nGee6LlOQe0UetMnbnPh1Pbp_B4Va6WvGqDg7O0AMYBSAMRpG4piDxXPWAA4RumbslrKxZEY9OMiJUYESny_XnDdY:1l13DH:7mLORXbzZnS-ml4hmru2iCktLDSiKW7hpb3iJCViHK8",
+            "expire_date": "2021-01-31T08:15:07.813Z"
+        }
+    },
+    {
+        "model": "main.account",
+        "pk": 1,
+        "fields": {
+            "first_name": "Serxan",
+            "last_name": "Rehimli",
+            "email": "serxan@mail.com",
+            "is_published": true,
+            "created_at": "2021-01-17T08:17:09.998Z",
+            "updated_at": "2021-01-17T08:17:09.998Z"
+        }
+    }
+    
+]
