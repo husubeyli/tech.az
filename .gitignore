@@ -11,5 +11,4 @@ data/
 .vscode/
 .DS_Store
 .debris
-.env
 8000
