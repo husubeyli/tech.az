@@ -1,17 +1,17 @@
 version: '3.1'
 
 services: 
-    # nginx-proxy:
-    #     image: jwilder/nginx-proxy
-    #     restart: "always"
-    #     ports:
-    #         - "80:80"
-    #     volumes:
-    #         - /var/run/docker.sock:/tmp/docker.sock:ro
-    #         - ./nginx/vhost/:/etc/nginx/vhost.d:ro
-    #         - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
-    #         - ./static/:/tech/static
-    #         - ./media/:/tech/media
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        restart: "always"
+        ports:
+            - "80:80"
+        volumes:
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - ./nginx/vhost/:/etc/nginx/vhost.d:ro
+            - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
+            - ./static/:/tech/static
+            - ./media/:/tech/media
     postgres:
         image: postgres
         restart: always
@@ -22,22 +22,22 @@ services:
         env_file: ./.env
 
 
-#     web:
-#         container_name: tech
-#         build: .
-#         restart: "always"
-#         ports:
-#             - "8000:8000"
+    web:
+        container_name: tech
+        build: .
+        restart: "always"
+        ports:
+            - "8000:8000"
         
-#         volumes:
-#             - .:/code/
-#             # - ./static/:/code/static
-#             # - ./media/:/code/media
-#         depends_on:
-#             - "postgres"
-#         env_file: .env
+        volumes:
+            - .:/code/
+            # - ./static/:/code/static
+            # - ./media/:/code/media
+        depends_on:
+            - "postgres"
+        env_file: .env
 
-# networks:
-#   default:
-#     external:
-#       name: nginx-proxy
+networks:
+  default:
+    external:
+      name: nginx-proxy
