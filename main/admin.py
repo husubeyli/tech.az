@@ -1,8 +1,9 @@
 from django.contrib import admin
 from main.models import Account
 from django.contrib.auth.models import User, Group
-admin.site.unregister(User)
-admin.site.unregister(Group)
+
+admin.site.unregister([User, Group])
+
 
 
 
@@ -24,4 +25,4 @@ class TechAdmin(admin.ModelAdmin):
         
     )
 
-# admin.site.site_url = '/tech.az/'
+admin.site.site_url = 'https://tech.az/'

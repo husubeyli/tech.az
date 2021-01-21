@@ -19,6 +19,9 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 admin.site.site_header = "Tech.az"
+admin.site.site_title = "Tech.az"
+admin.site.index_title = "Tech.az"
+
 
 urlpatterns = [
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
