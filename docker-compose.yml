@@ -13,7 +13,7 @@ services:
             - ./static/:/tech/static
             - ./media/:/tech/media
     postgres:
-        image: postgres:9.6.6
+        image: postgres
         restart: always
         volumes:
             - ./pgdb/:/var/lib/postgresql/
